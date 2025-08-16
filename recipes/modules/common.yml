@@ -28,6 +28,7 @@ modules:
       - waydroid-selinux
     optfix:
       - google
+      - 1Password
 
   - type: default-flatpaks
     configurations:
