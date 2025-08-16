@@ -27,7 +27,9 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe.yml
+          - gungnir-linux.yml
+          - gungnir-linux-nvidia.yml
+          - gungnir-linux-deck-nvidia.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
