@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: gingnir-linux
+name: gingnir-linux-deck-nvidia
 # description will be included in the image's metadata
 description: My personal Ublue image based on Bazzite
 
