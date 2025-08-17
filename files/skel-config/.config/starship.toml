@@ -150,3 +150,7 @@ time_format = "%I:%M %p"
 style = "bg:#33658A"
 format = '[ ♥ $time ]($style)'
 use_12hr = true
+
+[character]
+success_symbol = '[❯](bold purple)'
+error_symbol = '[✘](bold red)'
