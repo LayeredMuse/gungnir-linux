@@ -12,4 +12,5 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: modules/common.yml
   - from-file: modules/kde.yml
+  - from-file: modules/bazzite.yml
   - from-file: modules/signing.yml

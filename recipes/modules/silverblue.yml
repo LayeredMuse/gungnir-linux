@@ -1,0 +1,25 @@
+modules:
+  - type: files
+    files:
+      - source: gnome-config/00-system-font.ini
+        destination: /etc/dconf/db/local.d/00-system-font
+      - source: gnome-config/user
+        destination: /etc/dconf/profile/user
+
+  - type: script
+    snippets:
+      - dconf update
+
+  - type: rpm-ostree
+    install:
+      - fedora-workstation-repositories
+    
+  - type: script
+    scripts:
+      - enable-chrome-repo.sh
+
+  - type: rpm-ostree
+    install:
+      - google-chrome-stable
+    optfix:
+      - google

@@ -6,7 +6,6 @@ modules:
 
   - type: script
     scripts:
-      - enable-chrome-repo.sh
       - add-vscode-repo.sh
     snippets:
       - sed -i 's|^SHELL=.*|SHELL=/usr/bin/fish|' /etc/default/useradd
@@ -26,22 +25,10 @@ modules:
     install:
       - micro
       - starship
-      - google-chrome-stable
       - code
       - fish
       - winehq-stable
-      # Online RPM's
-      - https://downloads.1password.com/linux/rpm/stable/x86_64/1password-latest.rpm
-    remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      #- firefox
-      #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - waydroid
-      - waydroid-selinux
     optfix:
-      - google
-      - 1Password
       - wine-stable
 
   - type: files
@@ -56,6 +43,21 @@ modules:
       - sed -i 's|^SHELL=.*|SHELL=/usr/bin/fish|' /etc/default/useradd
       - chmod +x /usr/bin/update-dotfiles
       - ujust toggle-user-motd
+
+  - type: brew
+    auto-update: true
+    auto-upgrade: true
+    brew-analytics: false
+    nofile-limits: true
+
+  - type: bling
+    install:
+      - 1password
+
+  - type: files
+    files:
+      - source: scripts/install-brew-packages.sh
+        destination: /etc/profile.d/install-brew-packages.sh
 
   - type: default-flatpaks
     configurations:

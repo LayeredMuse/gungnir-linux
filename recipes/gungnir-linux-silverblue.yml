@@ -1,16 +1,15 @@
 # image will be published to ghcr.io/<user>/<name>
-name: gungnir-linux-deck-nvidia
+name: gungnir-linux-silverblue
 # description will be included in the image's metadata
-description: My personal Ublue image based on Bazzite
+description: My personal Ublue image based on Fedora Silverblue
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-deck-nvidia
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
   - from-file: modules/common.yml
-  - from-file: modules/kde.yml
-  - from-file: modules/bazzite.yml
+  - from-file: modules/silverblue.yml
   - from-file: modules/signing.yml
