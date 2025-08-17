@@ -5,7 +5,7 @@ SingleClick=false
 [General]
 TerminalApplication=kde-ptyxis
 TerminalService=org.gnome.Ptyxis.desktop
-fixed=OpenDyslexic Mono,10,-1,5,50,0,0,0,0,0
+fixed=OpenDyslexic Nerd Font,10,-1,5,50,0,0,0,0,0
 font=Noto Sans,10,-1,5,50,0,0,0,0,0
 menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0

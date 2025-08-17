@@ -52,6 +52,7 @@ modules:
     snippets:
       - sed -i 's|^SHELL=.*|SHELL=/usr/bin/fish|' /etc/default/useradd
       - chmod +x /usr/bin/update-dotfiles
+      - ujust toggle-user-motd
 
   - type: default-flatpaks
     configurations:

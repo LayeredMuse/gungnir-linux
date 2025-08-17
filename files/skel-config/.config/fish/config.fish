@@ -1,6 +1,4 @@
 # System-wide aliases for all users
-alias ls='lsd'
-alias cat='bat'
 alias update='ujust update'
 
 # Set a universal greeting
