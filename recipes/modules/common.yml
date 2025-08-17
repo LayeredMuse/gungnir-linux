@@ -42,7 +42,7 @@ modules:
     optfix:
       - google
       - 1Password
-      - winehq-stable
+      - wine-stable
 
   - type: files
     files:
