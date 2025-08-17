@@ -8,6 +8,16 @@ modules:
     scripts:
       - enable-chrome-repo.sh
       - add-vscode-repo.sh
+    snippets:
+      - sed -i 's|^SHELL=.*|SHELL=/usr/bin/fish|' /etc/default/useradd
+  
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - CascadiaCode
+        - Monofur
+        - OpenDyslexic
+        - DaddyTimeMono
 
   - type: rpm-ostree
     repos:
@@ -17,6 +27,7 @@ modules:
       - starship
       - google-chrome-stable
       - code
+      - fish
       # Online RPM's
       - https://downloads.1password.com/linux/rpm/stable/x86_64/1password-latest.rpm
     remove:
@@ -28,6 +39,19 @@ modules:
       - waydroid-selinux
     optfix:
       - google
+      - 1Password
+
+  - type: files
+    files:
+      - source: skel-config/.config
+        destination: /etc/skel/.config
+      - source: scripts/update-skel.sh
+        destination: /usr/bin/update-dotfiles
+
+  - type: script
+    snippets:
+      - sed -i 's|^SHELL=.*|SHELL=/usr/bin/fish|' /etc/default/useradd
+      - chmod +x /usr/bin/update-dotfiles
 
   - type: default-flatpaks
     configurations:
@@ -37,6 +61,4 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
       - scope: user # Also add Flathub user repo, but no user packages
-
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
