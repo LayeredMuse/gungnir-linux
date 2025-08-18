@@ -1,5 +1,5 @@
 modules:
-  - type: files
-    files:
-      - source: kde-config/kdeglobals
-        destination: /etc/xdg/kdeglobals
+  #- type: files
+  #  files:
+  #    - source: kde-config/kdeglobals
+  #      destination: /etc/xdg/kdeglobals
