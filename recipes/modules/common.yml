@@ -30,6 +30,7 @@ modules:
       - winehq-stable
     optfix:
       - wine-stable
+      - 1Password
 
   - type: files
     files:
