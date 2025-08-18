@@ -19,6 +19,20 @@ modules:
         - DaddyTimeMono
 
   - type: rpm-ostree
+    install:
+      - fedora-workstation-repositories
+    
+  - type: script
+    scripts:
+      - enable-chrome-repo.sh
+
+  - type: rpm-ostree
+    install:
+      - google-chrome-stable
+    optfix:
+      - google
+
+  - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://dl.winehq.org/wine-builds/fedora/%OS_VERSION%/winehq.repo
@@ -28,10 +42,10 @@ modules:
       - code
       - fish
       - winehq-stable
+      - google-chrome-stable
     optfix:
       - wine-stable
       - 1Password
-      - google
 
   - type: files
     files:
