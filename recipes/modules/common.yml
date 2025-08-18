@@ -58,6 +58,10 @@ modules:
     files:
       - source: scripts/install-brew-packages.sh
         destination: /etc/profile.d/install-brew-packages.sh
+  
+  - type: script
+    scripts:
+      - add-opendeck-udev-rule.sh
 
   - type: default-flatpaks
     configurations:
