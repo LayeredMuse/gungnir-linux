@@ -55,10 +55,10 @@ modules:
     install:
       - 1password
 
-  - type: files
-    files:
-      - source: scripts/install-brew-packages.sh
-        destination: /etc/profile.d/install-brew-packages.sh
+  #- type: files
+  #  files:
+  #    - source: scripts/install-brew-packages.sh
+  #      destination: /etc/profile.d/install-brew-packages.sh
   
   - type: script
     scripts:
